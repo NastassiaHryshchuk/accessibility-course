@@ -1,3 +1,13 @@
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+  
   a:focus,
   button:focus,
   a.box:focus,
@@ -12,6 +22,18 @@
     outline: none;
     border-color: transparent;
     box-shadow:  0px 0px 0px 2px darkmagenta;
+  }
+
+  .is-pulled-right a,
+  .content.container a,
+  .post a,
+  .footer .has-text-centered p a {
+    border: 1px solid black;
+  }
+
+  a:hover,
+  a:focus {
+      text-decoration: underline;
   }
 
   .button.is-info {
@@ -34,12 +56,16 @@
   .features .card .fa,
   .features .card .fab,
   .hero.is-info .tabs.is-boxed li.is-active button {
-    color: darkblue ;
+    color: black ;
   }
 
   .hero.is-info,
   .button.is-link {
     background-color: darkblue;
+  }
+
+  .tile.is-parent .subtitle {
+    line-height: 1.5;
   }
 
   .subtitle {
