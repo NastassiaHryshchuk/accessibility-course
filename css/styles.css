@@ -8,14 +8,33 @@
   input:focus,
   .input:focus,
   .textarea:focus,
-  .select select:focus {
+  .select select:focus,
+  .input.is-success.is-active,
+  .input.is-success.is-focused,
+  .input.is-success:active,
+  .input.is-success:focus,
+  .textarea.is-success.is-active,
+  .textarea.is-success.is-focused,
+  .textarea.is-success:active,
+  .textarea.is-success:focus,
+  .input.is-danger.is-active,
+  .input.is-danger.is-focused,
+  .input.is-danger:active,
+  .input.is-danger:focus,
+  .textarea.is-danger.is-active,
+  .textarea.is-danger.is-focused,
+  .textarea.is-danger:active,
+  .textarea.is-danger:focus {
     outline: none;
     border-color: transparent;
     box-shadow:  0px 0px 0px 2px darkmagenta;
   }
 
-  .button.is-info {
-    background-color: black;
+  .button.is-info,
+  .button.is-info:focus {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
   }
 
   .button.is-info:hover {
@@ -37,13 +56,58 @@
     color: darkblue ;
   }
 
-  .hero.is-info,
-  .button.is-link {
-    background-color: darkblue;
+  .hero.is-info {
+    background-color: white;
+    border: 1px solid black;
+  }
+
+  .hero.is-info .title,
+  .hero.is-info .subtitle {
+    color: black;
+  }
+
+  .tabs li {
+    margin-right: 8px;
+    margin-top: 4px;
+  }
+
+  .tabs li button {
+    padding: 8px;
+  }
+
+  .button.is-link,
+  .button.is-link:focus {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
   }
 
   .subtitle {
     color: black;
+  }
+
+  .tag:not(body).is-danger,
+  .tag:not(body).is-primary,
+  .tag:not(body).is-success {
+    background-color: black;
+  }
+
+  .media-right .has-text-grey-light,
+  .has-text-grey-light .fa-comments {
+    color: black !important;
+  }
+
+  .help.is-success {
+    color: darkgreen;
+  }
+
+  .help.is-danger {
+    color: darkred;
+  }
+
+  .is-pulled-right a {
+    margin: 0 5px;
+    padding: 5px 0;
   }
 
 .hero-bg {
