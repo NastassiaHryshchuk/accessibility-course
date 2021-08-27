@@ -36,3 +36,34 @@ function toggleTab(selectedNav, targetId) {
     }
   });
 }
+
+const tabs = document.querySelectorAll('[role="tab"]');
+const tabList = document.querySelector('[role="tablist"]');
+
+let tabFocus = 0;
+
+tabList.addEventListener("keydown", e => {
+  if (e.keyCode === 39 || e.keyCode === 37 || e.keyCode === 35 || e.keyCode === 36) {
+    tabs[tabFocus].setAttribute("tabindex", -1);
+    if (e.keyCode === 39) {
+      tabFocus++;
+      if (tabFocus >= tabs.length) {
+        tabFocus = 0;
+      }
+    } else if (e.keyCode === 37) {
+      tabFocus--;
+      if (tabFocus < 0) {
+        tabFocus = tabs.length - 1;
+      }
+    } else if (e.keyCode === 35 ) {
+      e.preventDefault();
+      tabFocus = tabs.length - 1;
+    } else if (e.keyCode === 36 ) {
+      e.preventDefault();
+      tabFocus = 0;
+    }
+    
+    tabs[tabFocus].setAttribute("tabindex", 0);
+    tabs[tabFocus].focus();
+  }
+});
